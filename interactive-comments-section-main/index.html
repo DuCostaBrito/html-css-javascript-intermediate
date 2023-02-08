@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Interactive comments section</title>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive comments section</title>
+  </head>
 
-<body>
-  <div id="comments-container">
-    <div class="comment-card">
+  <body>
+    <div id="id01" class="modal">
+      <span
+        onclick="document.getElementById('id01').style.display='none'"
+        class="close"
+        title="Close Modal"
+        >&times;</span
+      >
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          <h1>Delete Comment</h1>
+          <p>Are you sure you want to delete your account?</p>
+
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="button" class="deletebtn">Delete</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="comments-container">
+      <!--<div class="comment-card">
       <div class="grid fw-bold | score">
         <button><img src="images/icon-plus.svg" alt="upvote" /></button>
         <span>2</span>
@@ -35,20 +61,21 @@
         </div>
         <div class="comment">jashdklhdkjahskdjksdhjkasdhjka</div>
       </div>
+    </div>-->
     </div>
-  </div>
-<div class="grid | wrapper">
-  <div class="flex | my-comment-card">
-    <img class="user-avatar" src="images/avatars/image-juliusomo.png" alt="my user avatar">
-    <textarea id="comment-input" placeholder="Add a comment..."></textarea>
-    <button id="submit-button">SEND</button>
-  </div>
-</div>
+    <div class="grid | wrapper">
+      <div class="flex | my-comment-card">
+        <img
+          class="user-avatar"
+          src="images/avatars/image-juliusomo.png"
+          alt="my user avatar"
+        />
+        <textarea id="comment-input" placeholder="Add a comment..."></textarea>
+        <button id="submit-button">SEND</button>
+      </div>
+    </div>
 
-
-
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="style.css">
-</body>
-
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </body>
 </html>
