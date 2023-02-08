@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Interactive comments section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
 
-  <!-- Pull dynamic content from the data.json file -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<body>
+  <div id="comments-container">
+    <div class="comment-card">
+      <div class="grid fw-bold | score">
+        <button><img src="images/icon-plus.svg" alt="upvote" /></button>
+        <span>2</span>
+        <button><img src="images/icon-minus.svg" alt="downvote" /></button>
+      </div>
+      <div class="grid | comment-section">
+        <div class="flex | comment-header">
+          <div class="flex | comment-meta"> 
+            <img class="user-avatar" src="images/avatars/image-amyrobson.png" alt="userAvatar" />
+            <span class="fw-bold | user-name">User Name</span>
+            <small class="post-time">Post time</small>
+          </div>
+          <div class="flex | comment-buttons">
+            <button class="flex fc-500 fw-semi-bold hidden | delete-button"><img src="images/icon-delete.svg" alt=""> <span>Delete</span></button>
+            <button class="flex fc-600 fw-semi-bold hidden | edit-button"><img src="images/icon-edit.svg" alt=""> <span>Edit</span></button>
+            <button class="flex fc-600 fw-semi-bold | reply-button"><img src="images/icon-reply.svg" alt=""> <span>Reply</span></button>
+          </div>
+        </div>
+        <div class="comment">ADDA</div>
+      </div>
+    </div>
   </div>
+<div class="grid | wrapper">
+  <div class="flex | my-comment-card">
+    <img class="user-avatar" src="images/avatars/image-juliusomo.png" alt="my user avatar">
+    <textarea id="comment-input" placeholder="Add a comment..."></textarea>
+    <button id="submit-button">SEND</button>
+  </div>
+</div>
+
+
+
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </body>
+
 </html>
