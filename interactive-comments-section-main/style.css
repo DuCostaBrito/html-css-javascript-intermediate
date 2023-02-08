@@ -100,13 +100,14 @@ body {
     font-size: var(--fs-500);
     font-weight: var(--fw-regular);
     color: var(--color-neutral-600);
+    padding: 1.4rem;
 }
 
 #comments-container {
     display: grid;
     width: 100%;
     place-items: center;
-    padding-top: 4rem;
+    
 }
 
 /* comment card styling */
@@ -115,11 +116,11 @@ body {
     padding: 1.4rem;
     grid-template-columns: 50px 1fr;
     gap: 20px;
-    width: 750px;
+    width: 100%;
+    max-width: 750px;
     background-color: var(--color-neutral-100);
     align-items: start;
     border-radius: 10px;
-    word-break: break-word;
     margin-bottom: 1.4rem;
 }
 
@@ -130,6 +131,25 @@ body {
     gap: 10px;
     border-radius: 5px;
     margin: 0 auto;
+}
+
+@media (max-width: 30em){
+    .comment-card{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .score{
+        position: relative;
+        display: flex !important;
+        padding: 8px;
+        right: 120px;  
+    }
+
+    .comment-buttons{
+        position: relative;
+        top: 100px;
+    }
 }
 
 .comment-section {
@@ -163,6 +183,11 @@ body {
     background: none;
 }
 
+
+
+.comment{
+    word-break: break-word;
+}
 
 
 /* my-comment card */
