@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Video Comment & Like</title>
+</head>
+
+<body>
+    <div class="grid | wrapper">
+        <div class="grid | calculadora-container">
+            <div class="flex | calculadora-row text-row">
+                <div class="output">
+                    <p id="result">Calculadora desenvolvida com: HTML, CSS e vanilla JavaScript</p>
+                    <p id="components">Eduardo Brito</p>
+                </div>
+            </div> <!--texto-->
+            <div class="calculadora-row">
+                <button class="fc-Ac" data-type="clear">AC</button><button class="fc-symbol" data-type="parenteses">( )</button><button
+                    class="fc-symbol" data-type="operator">%</button><button class="fc-symbol" data-type="operator">/</button>
+            </div>
+            <div class="calculadora-row">
+                <button class="fc-700" data-type="number">7</button><button class="fc-700" data-type="number">8</button><button
+                    class="fc-700" data-type="number">9</button><button class="fc-symbol" data-type="operator">*</button>
+            </div>
+            <div class="calculadora-row">
+                <button class="fc-700" data-type="number">4</button><button class="fc-700" data-type="number">5</button><button
+                    class="fc-700" data-type="number">6</button><button class="fc-symbol" data-type="special">-</button>
+            </div>
+            <div class="calculadora-row">
+                <button class="fc-700" data-type="number">1</button><button class="fc-700" data-type="number">2</button><button
+                    class="fc-700" data-type="number">3</button><button class="fc-symbol" data-type="operator">+</button>
+            </div>
+            <div class="calculadora-row">
+                <button class="fc-700" data-type="number">0</button><button class="fc-700" data-type="number">,</button><button
+                    class="fc-700" data-type="delete">&#60;</button><button class="fc-symbol" data-type="finished">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
