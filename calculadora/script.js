@@ -108,9 +108,4 @@ function addEventListeners() {
     }
 };
 
-function evalWithPercentage(s) {
-    return eval(s.replaceAll('%', '0.01'))
-  };
-
-
 addEventListeners();
