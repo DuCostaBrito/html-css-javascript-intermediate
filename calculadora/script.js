@@ -5,7 +5,7 @@ let started = false;
 let resultArr = [];
 
 function isOperator(c){
-    if (c === '%' || c === '/' || c === '+' || c === '*' || c === '(')
+    if (c === '*0.01*' || c === '/' || c === '+' || c === '*' || c === '(')
         return true;
     return false;
 };
@@ -59,7 +59,10 @@ function appendComponent(component) {
     else if (type === "operator" && resultArr.length != 0 && !isOperator(resultArr[resultArr.length - 1]) ){
         const text = document.createTextNode(component.innerHTML);
         input.appendChild(text);
-        resultArr.push(component.innerHTML);
+        if (component.innerHTML === '%')
+            resultArr.push("*0.01*");
+        else
+            resultArr.push(component.innerHTML);
     }
     else if (type === "clear"){
         input.innerHTML = "";
@@ -90,10 +93,10 @@ function appendComponent(component) {
         input.appendChild(text);
         resultArr.push(component.innerHTML);
     }
-    else if (type == "finished" && isValid()){
+    else if (type == "finished" && isValid() && resultArr.length != 0){
         input.innerHTML = eval(resultArr.join(''));
         output.innerHTML = "";
-        resultArr = [eval(resultArr.join(''))];
+        resultArr = [evalWithPercentage(resultArr.join(''))];
     }
 };
 
@@ -104,6 +107,10 @@ function addEventListeners() {
         });
     }
 };
+
+function evalWithPercentage(s) {
+    return eval(s.replaceAll('%', '0.01'))
+  };
 
 
 addEventListeners();
